@@ -24,7 +24,6 @@
 
         uControl.Dock = DockStyle.Fill
         uControl.BringToFront()
-        MsgBox("i like easter eggs")
 
     End Sub
 
