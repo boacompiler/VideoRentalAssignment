@@ -1,0 +1,28 @@
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\bin\Debug\prototypingAssignment.exe.config
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\bin\Debug\prototypingAssignment.exe
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\bin\Debug\prototypingAssignment.pdb
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\bin\Debug\prototypingAssignment.xml
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.Form1.resources
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.Resources.resources
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.browserControl.resources
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.vbproj.GenerateResource.Cache
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.exe
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.xml
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.pdb
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.logInControl.resources
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\bin\Debug\VideoDatabase.accdb
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.AdminForm.resources
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment - before GIT\prototypingAssignment\bin\Debug\prototypingAssignment.exe.config
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment - before GIT\prototypingAssignment\obj\Debug\prototypingAssignment.exe
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment - before GIT\prototypingAssignment\obj\Debug\prototypingAssignment.xml
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment - before GIT\prototypingAssignment\obj\Debug\prototypingAssignment.pdb
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment - before GIT\prototypingAssignment\bin\Debug\VideoDatabase.accdb
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment - before GIT\prototypingAssignment\bin\Debug\prototypingAssignment.exe
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment - before GIT\prototypingAssignment\bin\Debug\prototypingAssignment.pdb
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment - before GIT\prototypingAssignment\bin\Debug\prototypingAssignment.xml
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment - before GIT\prototypingAssignment\obj\Debug\prototypingAssignment.Form1.resources
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment - before GIT\prototypingAssignment\obj\Debug\prototypingAssignment.Resources.resources
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment - before GIT\prototypingAssignment\obj\Debug\prototypingAssignment.AdminForm.resources
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment - before GIT\prototypingAssignment\obj\Debug\prototypingAssignment.browserControl.resources
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment - before GIT\prototypingAssignment\obj\Debug\prototypingAssignment.logInControl.resources
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment - before GIT\prototypingAssignment\obj\Debug\prototypingAssignment.vbproj.GenerateResource.Cache
