@@ -1,0 +1,14 @@
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\bin\Debug\prototypingAssignment.exe.config
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\bin\Debug\prototypingAssignment.exe
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\bin\Debug\prototypingAssignment.pdb
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\bin\Debug\prototypingAssignment.xml
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.Form1.resources
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.Resources.resources
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.browserControl.resources
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.vbproj.GenerateResource.Cache
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.exe
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.xml
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.pdb
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.logInControl.resources
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\bin\Debug\VideoDatabase.accdb
+c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.AdminForm.resources
