@@ -24,6 +24,7 @@
 
         uControl.Dock = DockStyle.Fill
         uControl.BringToFront()
+        MsgBox("3rd times the charm")
 
     End Sub
 
