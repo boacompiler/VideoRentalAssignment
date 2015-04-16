@@ -28,7 +28,6 @@
             If i = VideoDatabaseDataSet.Videos.Columns.Count - 1 Then
                 ComboBox1.SelectedIndex = 0
                 columnType = VideoDatabaseDataSet.Videos.Columns(ComboBox1.SelectedIndex).DataType
-                MsgBox(ComboBox1.SelectedIndex)
             End If
 
         Next
