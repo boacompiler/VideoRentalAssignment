@@ -32,10 +32,12 @@ Partial Class AdminForm
         Me.AvailableDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.VideosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VideoDatabaseDataSet = New prototypingAssignment.VideoDatabaseDataSet()
-        Me.VideosTableAdapter = New prototypingAssignment.VideoDatabaseDataSetTableAdapters.VideosTableAdapter()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnSearch = New System.Windows.Forms.Button()
+        Me.VideosTableAdapter = New prototypingAssignment.VideoDatabaseDataSetTableAdapters.VideosTableAdapter()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.BtnClear = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VideosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -112,17 +114,17 @@ Partial Class AdminForm
         Me.VideoDatabaseDataSet.DataSetName = "VideoDatabaseDataSet"
         Me.VideoDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'VideosTableAdapter
-        '
-        Me.VideosTableAdapter.ClearBeforeFill = True
-        '
         'TableLayoutPanel2
         '
-        Me.TableLayoutPanel2.ColumnCount = 2
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66666!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox1, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Button1, 1, 0)
+        Me.TableLayoutPanel2.ColumnCount = 4
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.BtnSearch, 2, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.TextBox1, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.ComboBox1, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.BtnClear, 3, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 3)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
@@ -134,20 +136,44 @@ Partial Class AdminForm
         'TextBox1
         '
         Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TextBox1.Location = New System.Drawing.Point(3, 3)
+        Me.TextBox1.Location = New System.Drawing.Point(136, 3)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(348, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(127, 20)
         Me.TextBox1.TabIndex = 0
         '
-        'Button1
+        'BtnSearch
         '
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button1.Location = New System.Drawing.Point(357, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(172, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BtnSearch.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnSearch.Location = New System.Drawing.Point(269, 3)
+        Me.BtnSearch.Name = "BtnSearch"
+        Me.BtnSearch.Size = New System.Drawing.Size(127, 23)
+        Me.BtnSearch.TabIndex = 1
+        Me.BtnSearch.Text = "Search"
+        Me.BtnSearch.UseVisualStyleBackColor = True
+        '
+        'VideosTableAdapter
+        '
+        Me.VideosTableAdapter.ClearBeforeFill = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(3, 3)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(127, 21)
+        Me.ComboBox1.TabIndex = 2
+        '
+        'BtnClear
+        '
+        Me.BtnClear.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnClear.Location = New System.Drawing.Point(402, 3)
+        Me.BtnClear.Name = "BtnClear"
+        Me.BtnClear.Size = New System.Drawing.Size(127, 23)
+        Me.BtnClear.TabIndex = 3
+        Me.BtnClear.Text = "Clear"
+        Me.BtnClear.UseVisualStyleBackColor = True
         '
         'AdminForm
         '
@@ -178,5 +204,7 @@ Partial Class AdminForm
     Friend WithEvents AvailableDataGridViewCheckBoxColumn As System.Windows.Forms.DataGridViewCheckBoxColumn
     Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents BtnSearch As System.Windows.Forms.Button
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents BtnClear As System.Windows.Forms.Button
 End Class
