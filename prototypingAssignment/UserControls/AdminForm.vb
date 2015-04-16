@@ -94,4 +94,26 @@
         TextBox1.Clear()
         VideosBindingSource.RemoveFilter()
     End Sub
+
+    Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
+        'VideoDatabaseDataSet.Videos.Rows(NumericUpDown1.Value).Delete()
+        Dim found As Boolean = False
+        Dim index As Integer = 0
+        For i As Integer = 0 To VideoDatabaseDataSet.Videos.Rows.Count - 1
+            If VideoDatabaseDataSet.Videos.Rows(i).Item(0) = NumericUpDown1.Value Then
+                MsgBox("found!")
+                index = i
+                found = True
+                Exit For
+            End If
+        Next
+        If found = False Then
+            MsgBox("ID not found")
+        Else
+            VideoDatabaseDataSet.Videos.Rows(index).Delete()
+            VideosTableAdapter.Update(VideoDatabaseDataSet.Videos)
+
+        End If
+
+    End Sub
 End Class
