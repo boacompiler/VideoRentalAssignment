@@ -1,12 +1,13 @@
 ﻿Public Class AdminForm
 
     Dim columnType As Type
+    Dim myForm As Form1
 
-    Sub New()
+    Sub New(form As Form1)
 
         ' This call is required by the designer.
         InitializeComponent()
-
+        myForm = form
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub
@@ -21,18 +22,14 @@
 
     Sub initComboBox()
 
-        For i As Integer = 0 To VideoDatabaseDataSet.Videos.Columns.Count
+        For i As Integer = 0 To VideoDatabaseDataSet.Videos.Columns.Count - 1
 
             ComboBox1.Items.Add(VideoDatabaseDataSet.Videos.Columns(i).ColumnName)
 
-            If i = VideoDatabaseDataSet.Videos.Columns.Count - 1 Then
-                ComboBox1.SelectedIndex = 0
-                columnType = VideoDatabaseDataSet.Videos.Columns(ComboBox1.SelectedIndex).DataType
-            End If
-
         Next
 
-        
+        ComboBox1.SelectedIndex = 0
+        columnType = VideoDatabaseDataSet.Videos.Columns(ComboBox1.SelectedIndex).DataType
 
     End Sub
 
@@ -110,8 +107,12 @@
         If found = False Then
             MsgBox("ID not found")
         Else
-            VideoDatabaseDataSet.Videos.Rows(index).Delete()
-            VideosTableAdapter.Update(VideoDatabaseDataSet.Videos)
+            Me.VideoDatabaseDataSet.Videos.Rows(index).Delete()
+            'myForm.VideoDatabaseDataSet.Videos.Rows(index).Delete()
+            Me.VideosTableAdapter.Update(VideoDatabaseDataSet.Videos)
+            'myForm.VideosTableAdapter.Update(Me.VideoDatabaseDataSet.Videos)
+            myForm.deleteRow(index)
+
 
         End If
 

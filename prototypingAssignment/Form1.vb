@@ -28,7 +28,7 @@
     End Sub
 
     Sub LogIn(admin As Boolean)
-        browserMenu = New browserControl(admin)
+        browserMenu = New browserControl(admin, Me)
         Me.Controls.Add(browserMenu)
         DockControl(browserMenu)
     End Sub
@@ -36,6 +36,17 @@
     Sub LogOut()
         DockControl(logInMenu)
         Me.Controls.Remove(browserMenu)
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'VideoDatabaseDataSet.Videos' table. You can move, or remove it, as needed.
+        Me.VideosTableAdapter.Fill(Me.VideoDatabaseDataSet.Videos)
+
+    End Sub
+
+    Sub deleteRow(index)
+        Me.VideoDatabaseDataSet.Videos.Rows(index).Delete()
+        Me.VideosTableAdapter.Fill(Me.VideoDatabaseDataSet.Videos)
     End Sub
 
 End Class

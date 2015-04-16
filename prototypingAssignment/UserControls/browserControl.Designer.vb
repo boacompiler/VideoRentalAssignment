@@ -22,7 +22,6 @@ Partial Class browserControl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.AdminMenuStrip = New System.Windows.Forms.MenuStrip()
         Me.UserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -32,9 +31,6 @@ Partial Class browserControl
         Me.LblBody = New System.Windows.Forms.Label()
         Me.BtnPrevious = New System.Windows.Forms.Button()
         Me.BtnNext = New System.Windows.Forms.Button()
-        Me.VideoDatabaseDataSet = New prototypingAssignment.VideoDatabaseDataSet()
-        Me.VideosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.VideosTableAdapter = New prototypingAssignment.VideoDatabaseDataSetTableAdapters.VideosTableAdapter()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
@@ -45,8 +41,6 @@ Partial Class browserControl
         Me.LblAvailability = New System.Windows.Forms.Label()
         Me.LblLength = New System.Windows.Forms.Label()
         Me.AdminMenuStrip.SuspendLayout()
-        CType(Me.VideoDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VideosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
@@ -75,7 +69,7 @@ Partial Class browserControl
         'LogOutToolStripMenuItem
         '
         Me.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem"
-        Me.LogOutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.LogOutToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.LogOutToolStripMenuItem.Text = "Log Out"
         '
         'AdminToolStripMenuItem
@@ -88,7 +82,7 @@ Partial Class browserControl
         'ManageDataToolStripMenuItem
         '
         Me.ManageDataToolStripMenuItem.Name = "ManageDataToolStripMenuItem"
-        Me.ManageDataToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ManageDataToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.ManageDataToolStripMenuItem.Text = "Manage Data"
         '
         'LblTitle
@@ -130,20 +124,6 @@ Partial Class browserControl
         Me.BtnNext.TabIndex = 3
         Me.BtnNext.Text = "Next"
         Me.BtnNext.UseVisualStyleBackColor = True
-        '
-        'VideoDatabaseDataSet
-        '
-        Me.VideoDatabaseDataSet.DataSetName = "VideoDatabaseDataSet"
-        Me.VideoDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'VideosBindingSource
-        '
-        Me.VideosBindingSource.DataMember = "Videos"
-        Me.VideosBindingSource.DataSource = Me.VideoDatabaseDataSet
-        '
-        'VideosTableAdapter
-        '
-        Me.VideosTableAdapter.ClearBeforeFill = True
         '
         'TableLayoutPanel2
         '
@@ -271,8 +251,6 @@ Partial Class browserControl
         Me.Size = New System.Drawing.Size(770, 702)
         Me.AdminMenuStrip.ResumeLayout(False)
         Me.AdminMenuStrip.PerformLayout()
-        CType(Me.VideoDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VideosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.TableLayoutPanel4.ResumeLayout(False)
@@ -294,9 +272,6 @@ Partial Class browserControl
     Friend WithEvents LblBody As System.Windows.Forms.Label
     Friend WithEvents BtnPrevious As System.Windows.Forms.Button
     Friend WithEvents BtnNext As System.Windows.Forms.Button
-    Friend WithEvents VideoDatabaseDataSet As prototypingAssignment.VideoDatabaseDataSet
-    Friend WithEvents VideosBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents VideosTableAdapter As prototypingAssignment.VideoDatabaseDataSetTableAdapters.VideosTableAdapter
     Friend WithEvents ManageDataToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox

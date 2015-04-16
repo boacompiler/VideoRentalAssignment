@@ -22,7 +22,27 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Me.VideoDatabaseDataSet = New prototypingAssignment.VideoDatabaseDataSet()
+        Me.VideosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VideosTableAdapter = New prototypingAssignment.VideoDatabaseDataSetTableAdapters.VideosTableAdapter()
+        CType(Me.VideoDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VideosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'VideoDatabaseDataSet
+        '
+        Me.VideoDatabaseDataSet.DataSetName = "VideoDatabaseDataSet"
+        Me.VideoDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'VideosBindingSource
+        '
+        Me.VideosBindingSource.DataMember = "Videos"
+        Me.VideosBindingSource.DataSource = Me.VideoDatabaseDataSet
+        '
+        'VideosTableAdapter
+        '
+        Me.VideosTableAdapter.ClearBeforeFill = True
         '
         'Form1
         '
@@ -31,8 +51,13 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(397, 369)
         Me.Name = "Form1"
         Me.Text = "Form1"
+        CType(Me.VideoDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VideosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
+    Friend WithEvents VideoDatabaseDataSet As prototypingAssignment.VideoDatabaseDataSet
+    Friend WithEvents VideosBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents VideosTableAdapter As prototypingAssignment.VideoDatabaseDataSetTableAdapters.VideosTableAdapter
 
 End Class
