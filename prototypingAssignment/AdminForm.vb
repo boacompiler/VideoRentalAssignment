@@ -133,7 +133,7 @@
         If found = False Then
             MsgBox("ID not found")
         Else
-            Dim id As Integer = VideoDatabaseDataSet.Videos.Rows(index).Item(0)
+            Dim id As Integer = VideoDatabaseDataSet.Videos.Rows(index).Item(0) 'this is the ugly solution we needed, but not the ugly solution we deserve
             Dim title As String = VideoDatabaseDataSet.Videos.Rows(index).Item(1)
             Dim description As String = VideoDatabaseDataSet.Videos.Rows(index).Item(2)
             Dim length As String = VideoDatabaseDataSet.Videos.Rows(index).Item(3)
@@ -157,12 +157,10 @@
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
         Dim addForm As VideoEditForm = New VideoEditForm()
         addForm.ShowDialog()
-        Dim id As Integer
         Dim title As String = addForm.TextBoxTitle.Text
         Dim description As String = addForm.RichTextBoxDescription.Text
         Dim length As String = addForm.NumericUpDownLength.Value
         Dim available As Boolean = addForm.CheckBoxAvailable.Checked
-
 
         Me.VideoDatabaseDataSet.Videos.Rows.Add(Nothing, title, description, length, available)
         Me.VideosTableAdapter.Update(VideoDatabaseDataSet.Videos)
