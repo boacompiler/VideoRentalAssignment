@@ -33,6 +33,7 @@
         browserMenu = New browserControl(admin, Me)
         Me.Controls.Add(browserMenu)
         DockControl(browserMenu)
+        Me.Controls.Remove(logInMenu)
     End Sub
 
     Sub LogOut()

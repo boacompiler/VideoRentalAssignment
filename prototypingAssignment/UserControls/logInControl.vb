@@ -1,6 +1,6 @@
 ﻿Public Class logInControl
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles BtnLogin.Click
 
         Me.UsersTableAdapter.Fill(MainForm.VideoDatabaseDataSet.Users)
 
@@ -31,4 +31,15 @@
         End If
 
     End Sub
+
+    Protected Overrides Function ProcessCmdKey(ByRef msg As Message, keyData As Keys) As Boolean
+
+        If keyData = Keys.Enter Then
+            BtnLogin.PerformClick()
+            Return True
+        End If
+
+        Return MyBase.ProcessCmdKey(msg, keyData)
+    End Function
+    
 End Class
