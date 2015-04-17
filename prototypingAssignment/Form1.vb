@@ -44,8 +44,12 @@
 
     End Sub
 
-    Sub deleteRow(index)
+    Sub DeleteRow(index)
         Me.VideoDatabaseDataSet.Videos.Rows(index).Delete()
+        Me.VideosTableAdapter.Fill(Me.VideoDatabaseDataSet.Videos)
+    End Sub
+
+    Sub UpdateRow()
         Me.VideosTableAdapter.Fill(Me.VideoDatabaseDataSet.Videos)
     End Sub
 

@@ -37,15 +37,15 @@ Partial Class AdminForm
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.BtnClear = New System.Windows.Forms.Button()
-        Me.VideosTableAdapter = New prototypingAssignment.VideoDatabaseDataSetTableAdapters.VideosTableAdapter()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.LblID = New System.Windows.Forms.Label()
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.BtnAdd = New System.Windows.Forms.Button()
         Me.BtnDelete = New System.Windows.Forms.Button()
+        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.LblID = New System.Windows.Forms.Label()
+        Me.VideosTableAdapter = New prototypingAssignment.VideoDatabaseDataSetTableAdapters.VideosTableAdapter()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VideosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -190,10 +190,6 @@ Partial Class AdminForm
         Me.BtnClear.Text = "Clear"
         Me.BtnClear.UseVisualStyleBackColor = True
         '
-        'VideosTableAdapter
-        '
-        Me.VideosTableAdapter.ClearBeforeFill = True
-        '
         'TableLayoutPanel3
         '
         Me.TableLayoutPanel3.ColumnCount = 2
@@ -225,6 +221,36 @@ Partial Class AdminForm
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel4.Size = New System.Drawing.Size(260, 28)
         Me.TableLayoutPanel4.TabIndex = 0
+        '
+        'BtnEdit
+        '
+        Me.BtnEdit.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnEdit.Location = New System.Drawing.Point(3, 3)
+        Me.BtnEdit.Name = "BtnEdit"
+        Me.BtnEdit.Size = New System.Drawing.Size(80, 22)
+        Me.BtnEdit.TabIndex = 0
+        Me.BtnEdit.Text = "Edit"
+        Me.BtnEdit.UseVisualStyleBackColor = True
+        '
+        'BtnAdd
+        '
+        Me.BtnAdd.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnAdd.Location = New System.Drawing.Point(89, 3)
+        Me.BtnAdd.Name = "BtnAdd"
+        Me.BtnAdd.Size = New System.Drawing.Size(80, 22)
+        Me.BtnAdd.TabIndex = 1
+        Me.BtnAdd.Text = "Add"
+        Me.BtnAdd.UseVisualStyleBackColor = True
+        '
+        'BtnDelete
+        '
+        Me.BtnDelete.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnDelete.Location = New System.Drawing.Point(175, 3)
+        Me.BtnDelete.Name = "BtnDelete"
+        Me.BtnDelete.Size = New System.Drawing.Size(82, 22)
+        Me.BtnDelete.TabIndex = 2
+        Me.BtnDelete.Text = "Delete"
+        Me.BtnDelete.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel5
         '
@@ -260,35 +286,9 @@ Partial Class AdminForm
         Me.LblID.Text = "ID : "
         Me.LblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'BtnEdit
+        'VideosTableAdapter
         '
-        Me.BtnEdit.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnEdit.Location = New System.Drawing.Point(3, 3)
-        Me.BtnEdit.Name = "BtnEdit"
-        Me.BtnEdit.Size = New System.Drawing.Size(80, 22)
-        Me.BtnEdit.TabIndex = 0
-        Me.BtnEdit.Text = "Edit"
-        Me.BtnEdit.UseVisualStyleBackColor = True
-        '
-        'BtnAdd
-        '
-        Me.BtnAdd.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnAdd.Location = New System.Drawing.Point(89, 3)
-        Me.BtnAdd.Name = "BtnAdd"
-        Me.BtnAdd.Size = New System.Drawing.Size(80, 22)
-        Me.BtnAdd.TabIndex = 1
-        Me.BtnAdd.Text = "Add"
-        Me.BtnAdd.UseVisualStyleBackColor = True
-        '
-        'BtnDelete
-        '
-        Me.BtnDelete.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnDelete.Location = New System.Drawing.Point(175, 3)
-        Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(82, 22)
-        Me.BtnDelete.TabIndex = 2
-        Me.BtnDelete.Text = "Delete"
-        Me.BtnDelete.UseVisualStyleBackColor = True
+        Me.VideosTableAdapter.ClearBeforeFill = True
         '
         'AdminForm
         '

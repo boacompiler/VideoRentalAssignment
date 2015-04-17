@@ -92,10 +92,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="UserControls\AdminForm.Designer.vb">
+    <Compile Include="AdminForm.Designer.vb">
       <DependentUpon>AdminForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\AdminForm.vb">
+    <Compile Include="AdminForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserControls\browserControl.Designer.vb">
@@ -115,6 +115,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VideoDatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="VideoEditForm.Designer.vb">
+      <DependentUpon>VideoEditForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VideoEditForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -126,7 +132,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\AdminForm.resx">
+    <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\browserControl.resx">
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\logInControl.resx">
       <DependentUpon>logInControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VideoEditForm.resx">
+      <DependentUpon>VideoEditForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
