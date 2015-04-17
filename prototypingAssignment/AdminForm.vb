@@ -1,9 +1,9 @@
 ﻿Public Class AdminForm
 
     Dim columnType As Type
-    Dim myForm As Form1
+    Dim myForm As MainForm
 
-    Sub New(form As Form1)
+    Sub New(form As MainForm)
 
         ' This call is required by the designer.
         InitializeComponent()
@@ -107,7 +107,7 @@
         If found = False Then
             MsgBox("ID not found")
         Else
-            Dim result As Integer = MessageBox.Show("Are you sure you want to delete " & Form1.VideoDatabaseDataSet.Videos.Rows(index).Item(1), "Delete", MessageBoxButtons.OKCancel)
+            Dim result As Integer = MessageBox.Show("Are you sure you want to delete " & MainForm.VideoDatabaseDataSet.Videos.Rows(index).Item(1), "Delete", MessageBoxButtons.OKCancel)
 
             If result = DialogResult.OK Then
                 Me.VideoDatabaseDataSet.Videos.Rows(index).Delete()

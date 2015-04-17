@@ -1,8 +1,9 @@
-﻿Public Class Form1
+﻿Public Class MainForm
 
     Public isAdmin As Boolean
     Public logInMenu As logInControl
     Public browserMenu As browserControl
+    Public userIndex As Integer = 1
 
     Sub New()
 
@@ -15,7 +16,7 @@
         logInMenu = New logInControl()
         Me.Controls.Add(logInMenu)
 
-        
+
 
         DockControl(logInMenu)
     End Sub
@@ -28,12 +29,16 @@
     End Sub
 
     Sub LogIn(admin As Boolean)
+        Me.Controls.Remove(browserMenu)
         browserMenu = New browserControl(admin, Me)
         Me.Controls.Add(browserMenu)
         DockControl(browserMenu)
     End Sub
 
     Sub LogOut()
+        Me.Controls.Remove(logInMenu)
+        logInMenu = New logInControl()
+        Me.Controls.Add(logInMenu)
         DockControl(logInMenu)
         Me.Controls.Remove(browserMenu)
     End Sub

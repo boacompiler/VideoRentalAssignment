@@ -70,11 +70,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -115,6 +115,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VideoDatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="VideoDatabaseDataSet.vb">
+      <DependentUpon>VideoDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="VideoEditForm.Designer.vb">
       <DependentUpon>VideoEditForm.vb</DependentUpon>
     </Compile>
@@ -123,8 +126,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

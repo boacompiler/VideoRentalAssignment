@@ -23,11 +23,23 @@ prototypingAssignment
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:prototypingAssignment.VideoDatabaseDataSet.UsersDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:prototypingAssignment.VideoDatabaseDataSet.VideosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:prototypingAssignment.VideoDatabaseDataSet.UsersRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:prototypingAssignment.VideoDatabaseDataSet.VideosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:prototypingAssignment.VideoDatabaseDataSet.UsersRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -36,6 +48,10 @@ Row event argument class
 Represents a strongly typed in-memory cache of data.
 </summary>
 </member><member name="T:prototypingAssignment.VideoDatabaseDataSetTableAdapters.VideosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:prototypingAssignment.VideoDatabaseDataSetTableAdapters.UsersTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

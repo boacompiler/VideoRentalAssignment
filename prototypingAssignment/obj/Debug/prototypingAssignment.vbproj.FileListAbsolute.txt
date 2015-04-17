@@ -2,7 +2,6 @@ c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prot
 c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\bin\Debug\prototypingAssignment.exe
 c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\bin\Debug\prototypingAssignment.pdb
 c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\bin\Debug\prototypingAssignment.xml
-c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.Form1.resources
 c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.Resources.resources
 c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.browserControl.resources
 c:\users\robert\documents\visual studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.vbproj.GenerateResource.Cache
@@ -27,3 +26,4 @@ C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment - be
 C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment - before GIT\prototypingAssignment\obj\Debug\prototypingAssignment.logInControl.resources
 C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment - before GIT\prototypingAssignment\obj\Debug\prototypingAssignment.vbproj.GenerateResource.Cache
 C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.VideoEditForm.resources
+C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.MainForm.resources

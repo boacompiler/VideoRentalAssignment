@@ -1,9 +1,9 @@
 ﻿Public Class browserControl
 
     Dim movieIndex As Integer
-    Dim myForm As Form1
+    Dim myForm As MainForm
 
-    Sub New(isAdmin As Boolean, form As Form1)
+    Sub New(isAdmin As Boolean, form As MainForm)
 
         ' This call is required by the designer.
         InitializeComponent()
@@ -17,17 +17,17 @@
     End Sub
 
     Private Sub LogOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogOutToolStripMenuItem.Click
-        Form1.LogOut()
+        MainForm.LogOut()
     End Sub
 
     Sub displayMovie(index As Integer)
         Try
-            LblTitle.Text = Form1.VideoDatabaseDataSet.Videos.Rows(index).Item(1)
-            LblBody.Text = Form1.VideoDatabaseDataSet.Videos.Rows(index).Item(2)
+            LblTitle.Text = MainForm.VideoDatabaseDataSet.Videos.Rows(index).Item(1)
+            LblBody.Text = MainForm.VideoDatabaseDataSet.Videos.Rows(index).Item(2)
 
-            LblLength.Text = "Runtime: " & Form1.VideoDatabaseDataSet.Videos.Rows(index).Item(3) & " minutes"
+            LblLength.Text = "Runtime: " & MainForm.VideoDatabaseDataSet.Videos.Rows(index).Item(3) & " minutes"
 
-            If Form1.VideoDatabaseDataSet.Videos.Rows(index).Item(4) Then
+            If MainForm.VideoDatabaseDataSet.Videos.Rows(index).Item(4) Then
                 LblAvailability.ForeColor = Color.Green
                 LblAvailability.Text = "Available"
             Else
@@ -48,7 +48,7 @@
 
     Private Sub BtnNext_Click(sender As Object, e As EventArgs) Handles BtnNext.Click
         movieIndex += 1
-        If movieIndex = Form1.VideoDatabaseDataSet.Videos.Rows.Count Then
+        If movieIndex = MainForm.VideoDatabaseDataSet.Videos.Rows.Count Then
             movieIndex = 0
         End If
         displayMovie(movieIndex)
@@ -57,7 +57,8 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnPrevious.Click
         movieIndex -= 1
         If movieIndex = -1 Then
-            movieIndex = Form1.VideoDatabaseDataSet.Videos.Rows.Count - 1
+            movieIndex = MainForm.VideoDatabaseDataSet.Videos.Rows.Count - 1
+
         End If
         displayMovie(movieIndex)
     End Sub
