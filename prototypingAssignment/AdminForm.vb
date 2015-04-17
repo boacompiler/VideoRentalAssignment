@@ -148,8 +148,25 @@
             editForm.Dispose()
 
             Me.VideosTableAdapter.Update(VideoDatabaseDataSet.Videos)
+            Me.VideosTableAdapter.Fill(Me.VideoDatabaseDataSet.Videos)
             myForm.UpdateRow()
 
         End If
+    End Sub
+
+    Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
+        Dim addForm As VideoEditForm = New VideoEditForm()
+        addForm.ShowDialog()
+        Dim id As Integer
+        Dim title As String = addForm.TextBoxTitle.Text
+        Dim description As String = addForm.RichTextBoxDescription.Text
+        Dim length As String = addForm.NumericUpDownLength.Value
+        Dim available As Boolean = addForm.CheckBoxAvailable.Checked
+
+
+        Me.VideoDatabaseDataSet.Videos.Rows.Add(Nothing, title, description, length, available)
+        Me.VideosTableAdapter.Update(VideoDatabaseDataSet.Videos)
+        Me.VideosTableAdapter.Fill(Me.VideoDatabaseDataSet.Videos)
+        myForm.UpdateRow()
     End Sub
 End Class
