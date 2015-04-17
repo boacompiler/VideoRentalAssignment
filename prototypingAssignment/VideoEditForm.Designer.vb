@@ -64,7 +64,6 @@ Partial Class VideoEditForm
         Me.NumericUpDownID.Enabled = False
         Me.NumericUpDownID.Location = New System.Drawing.Point(3, 88)
         Me.NumericUpDownID.Maximum = New Decimal(New Integer() {1000000, 0, 0, 0})
-        Me.NumericUpDownID.Minimum = New Decimal(New Integer() {1000000, 0, 0, -2147483648})
         Me.NumericUpDownID.Name = "NumericUpDownID"
         Me.NumericUpDownID.Size = New System.Drawing.Size(44, 20)
         Me.NumericUpDownID.TabIndex = 0

@@ -272,7 +272,6 @@ Partial Class AdminForm
         Me.NumericUpDown1.Dock = System.Windows.Forms.DockStyle.Top
         Me.NumericUpDown1.Location = New System.Drawing.Point(133, 3)
         Me.NumericUpDown1.Maximum = New Decimal(New Integer() {1000000, 0, 0, 0})
-        Me.NumericUpDown1.Minimum = New Decimal(New Integer() {1000000, 0, 0, -2147483648})
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(124, 20)
         Me.NumericUpDown1.TabIndex = 0
