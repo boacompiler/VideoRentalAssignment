@@ -1,7 +1,7 @@
-﻿Public Class MainForm
+﻿Public Class frmMain
 
     Public isAdmin As Boolean
-    Public logInMenu As logInControl
+    Public logInMenu As uctLogIn
     Public browserMenu As browserControl
     Public userIndex As Integer = 1
 
@@ -13,7 +13,7 @@
         ' Add any initialization after the InitializeComponent() call.
         isAdmin = True
 
-        logInMenu = New logInControl()
+        logInMenu = New uctLogIn()
         Me.Controls.Add(logInMenu)
 
 
@@ -38,7 +38,7 @@
 
     Sub LogOut()
         Me.Controls.Remove(logInMenu)
-        logInMenu = New logInControl()
+        logInMenu = New uctLogIn()
         Me.Controls.Add(logInMenu)
         DockControl(logInMenu)
         Me.Controls.Remove(browserMenu)
@@ -59,4 +59,7 @@
         Me.VideosTableAdapter.Fill(Me.VideoDatabaseDataSet.Videos)
     End Sub
 
+    Private Sub VideosBindingSource_CurrentChanged(sender As Object, e As EventArgs) Handles VideosBindingSource.CurrentChanged
+
+    End Sub
 End Class

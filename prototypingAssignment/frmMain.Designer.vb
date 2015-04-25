@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class MainForm
+Partial Class frmMain
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -44,13 +44,13 @@ Partial Class MainForm
         '
         Me.VideosTableAdapter.ClearBeforeFill = True
         '
-        'Form1
+        'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(397, 369)
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Name = "frmMain"
+        Me.Text = "Video Rental"
         CType(Me.VideoDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VideosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

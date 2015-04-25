@@ -1,9 +1,9 @@
-﻿Public Class AdminForm
+﻿Public Class frmAdmin
 
     Dim columnType As Type
-    Dim myForm As MainForm
+    Dim myForm As frmMain
 
-    Sub New(form As MainForm)
+    Sub New(form As frmMain)
 
         ' This call is required by the designer.
         InitializeComponent()
@@ -24,28 +24,28 @@
 
         For i As Integer = 0 To VideoDatabaseDataSet.Videos.Columns.Count - 1
 
-            ComboBox1.Items.Add(VideoDatabaseDataSet.Videos.Columns(i).ColumnName)
+            cboColumn.Items.Add(VideoDatabaseDataSet.Videos.Columns(i).ColumnName)
 
         Next
 
-        ComboBox1.SelectedIndex = 0
-        columnType = VideoDatabaseDataSet.Videos.Columns(ComboBox1.SelectedIndex).DataType
+        cboColumn.SelectedIndex = 0
+        columnType = VideoDatabaseDataSet.Videos.Columns(cboColumn.SelectedIndex).DataType
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles cmdSearch.Click
 
-        If TextBox1.Text <> Nothing Then
+        If txtSearch.Text <> Nothing Then
 
             Dim filter As String
 
             Select Case columnType.Name
                 Case "Boolean"
-                    filter = ComboBox1.Text & " = " & TextBox1.Text.Trim
+                    filter = cboColumn.Text & " = " & txtSearch.Text.Trim
                 Case "Int32"
-                    filter = ComboBox1.Text & " = " & TextBox1.Text.Trim
+                    filter = cboColumn.Text & " = " & txtSearch.Text.Trim
                 Case "String"
-                    filter = ComboBox1.Text & " like '%" & TextBox1.Text & "%'"
+                    filter = cboColumn.Text & " like '%" & txtSearch.Text & "%'"
                 Case Else
                     MsgBox("unsupported dataType: " & columnType.Name)
             End Select
@@ -62,15 +62,15 @@
 
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        TextBox1.Clear()
-        columnType = VideoDatabaseDataSet.Videos.Columns(ComboBox1.SelectedIndex).DataType
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboColumn.SelectedIndexChanged
+        txtSearch.Clear()
+        columnType = VideoDatabaseDataSet.Videos.Columns(cboColumn.SelectedIndex).DataType
     End Sub
 
-    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
+    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtSearch.KeyPress
         Select Case columnType.Name
             Case "Boolean"
-                TextBox1.Clear()
+                txtSearch.Clear()
                 If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso e.KeyChar <> "0" AndAlso e.KeyChar <> "1" Then
                     MessageBox.Show("Please enter Boolean values only: 1/0")
                     e.Handled = True
@@ -87,17 +87,17 @@
         End Select
     End Sub
 
-    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
-        TextBox1.Clear()
+    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles cmdClear.Click
+        txtSearch.Clear()
         VideosBindingSource.RemoveFilter()
     End Sub
 
-    Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
+    Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles cmdDelete.Click
         'VideoDatabaseDataSet.Videos.Rows(NumericUpDown1.Value).Delete()
         Dim found = False
         Dim index As Integer = 0
         For i As Integer = 0 To VideoDatabaseDataSet.Videos.Rows.Count - 1
-            If VideoDatabaseDataSet.Videos.Rows(i).Item(0) = NumericUpDown1.Value Then
+            If VideoDatabaseDataSet.Videos.Rows(i).Item(0) = nudID.Value Then
                 'MsgBox("found!")
                 index = i
                 found = True
@@ -107,7 +107,7 @@
         If found = False Then
             MsgBox("ID not found")
         Else
-            Dim result As Integer = MessageBox.Show("Are you sure you want to delete " & MainForm.VideoDatabaseDataSet.Videos.Rows(index).Item(1), "Delete", MessageBoxButtons.OKCancel)
+            Dim result As Integer = MessageBox.Show("Are you sure you want to delete " & frmMain.VideoDatabaseDataSet.Videos.Rows(index).Item(1), "Delete", MessageBoxButtons.OKCancel)
 
             If result = DialogResult.OK Then
                 Me.VideoDatabaseDataSet.Videos.Rows(index).Delete()
@@ -117,13 +117,18 @@
 
         End If
 
+        If myForm.browserMenu.movieIndex = index Then
+            myForm.browserMenu.IncrementIndex() 'TODO fix this
+        End If
+
+
     End Sub
 
-    Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
+    Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles cmdEdit.Click
         Dim found = False
         Dim index As Integer = 0
         For i As Integer = 0 To VideoDatabaseDataSet.Videos.Rows.Count - 1
-            If VideoDatabaseDataSet.Videos.Rows(i).Item(0) = NumericUpDown1.Value Then
+            If VideoDatabaseDataSet.Videos.Rows(i).Item(0) = nudID.Value Then
                 'MsgBox("found!")
                 index = i
                 found = True
@@ -138,33 +143,37 @@
             Dim description As String = VideoDatabaseDataSet.Videos.Rows(index).Item(2)
             Dim length As String = VideoDatabaseDataSet.Videos.Rows(index).Item(3)
             Dim available As Boolean = VideoDatabaseDataSet.Videos.Rows(index).Item(4)
-            Dim editForm As VideoEditForm = New VideoEditForm(id, title, description, length, available)
+            Dim editForm As frmVideoEdit = New frmVideoEdit(id, title, description, length, available)
             editForm.ShowDialog()
             'MsgBox(title)
-            VideoDatabaseDataSet.Videos.Rows(index).Item(1) = editForm.TextBoxTitle.Text
-            VideoDatabaseDataSet.Videos.Rows(index).Item(2) = editForm.RichTextBoxDescription.Text
-            VideoDatabaseDataSet.Videos.Rows(index).Item(3) = editForm.NumericUpDownLength.Value
-            VideoDatabaseDataSet.Videos.Rows(index).Item(4) = editForm.CheckBoxAvailable.Checked
+            If editForm.cancelled = False Then
+                VideoDatabaseDataSet.Videos.Rows(index).Item(1) = editForm.txtTitle.Text
+                VideoDatabaseDataSet.Videos.Rows(index).Item(2) = editForm.rtfDescription.Text
+                VideoDatabaseDataSet.Videos.Rows(index).Item(3) = editForm.nudLength.Value
+                VideoDatabaseDataSet.Videos.Rows(index).Item(4) = editForm.chkAvailable.Checked
+
+                Me.VideosTableAdapter.Update(VideoDatabaseDataSet.Videos)
+                Me.VideosTableAdapter.Fill(Me.VideoDatabaseDataSet.Videos)
+                myForm.UpdateRow()
+            End If
             editForm.Dispose()
-
-            Me.VideosTableAdapter.Update(VideoDatabaseDataSet.Videos)
-            Me.VideosTableAdapter.Fill(Me.VideoDatabaseDataSet.Videos)
-            myForm.UpdateRow()
-
         End If
     End Sub
 
-    Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
-        Dim addForm As VideoEditForm = New VideoEditForm()
+    Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles cmdAdd.Click
+        Dim addForm As frmVideoEdit = New frmVideoEdit()
         addForm.ShowDialog()
-        Dim title As String = addForm.TextBoxTitle.Text
-        Dim description As String = addForm.RichTextBoxDescription.Text
-        Dim length As String = addForm.NumericUpDownLength.Value
-        Dim available As Boolean = addForm.CheckBoxAvailable.Checked
+        Dim title As String = addForm.txtTitle.Text
+        Dim description As String = addForm.rtfDescription.Text
+        Dim length As String = addForm.nudLength.Value
+        Dim available As Boolean = addForm.chkAvailable.Checked
 
-        Me.VideoDatabaseDataSet.Videos.Rows.Add(Nothing, title, description, length, available)
-        Me.VideosTableAdapter.Update(VideoDatabaseDataSet.Videos)
-        Me.VideosTableAdapter.Fill(Me.VideoDatabaseDataSet.Videos)
-        myForm.UpdateRow()
+        If addForm.cancelled = False Then
+            Me.VideoDatabaseDataSet.Videos.Rows.Add(Nothing, title, description, length, available)
+            Me.VideosTableAdapter.Update(VideoDatabaseDataSet.Videos)
+            Me.VideosTableAdapter.Fill(Me.VideoDatabaseDataSet.Videos)
+            myForm.UpdateRow()
+        End If
+        addForm.Dispose()
     End Sub
 End Class

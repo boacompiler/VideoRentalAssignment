@@ -27,3 +27,33 @@ C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment - be
 C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment - before GIT\prototypingAssignment\obj\Debug\prototypingAssignment.vbproj.GenerateResource.Cache
 C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.VideoEditForm.resources
 C:\Users\Robert\Documents\Visual Studio 2013\Projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.MainForm.resources
+F:\VS projects\prototypingAssignment\prototypingAssignment\bin\Debug\prototypingAssignment.exe.config
+F:\VS projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.exe
+F:\VS projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.xml
+F:\VS projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.pdb
+F:\VS projects\prototypingAssignment\prototypingAssignment\bin\Debug\VideoDatabase.accdb
+F:\VS projects\prototypingAssignment\prototypingAssignment\bin\Debug\prototypingAssignment.exe
+F:\VS projects\prototypingAssignment\prototypingAssignment\bin\Debug\prototypingAssignment.pdb
+F:\VS projects\prototypingAssignment\prototypingAssignment\bin\Debug\prototypingAssignment.xml
+F:\VS projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.Resources.resources
+F:\VS projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.browserControl.resources
+F:\VS projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.vbproj.GenerateResource.Cache
+E:\VS projects\prototypingAssignment\prototypingAssignment\bin\Debug\prototypingAssignment.exe.config
+E:\VS projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.exe
+E:\VS projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.xml
+E:\VS projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.pdb
+E:\VS projects\prototypingAssignment\prototypingAssignment\bin\Debug\VideoDatabase.accdb
+E:\VS projects\prototypingAssignment\prototypingAssignment\bin\Debug\prototypingAssignment.exe
+E:\VS projects\prototypingAssignment\prototypingAssignment\bin\Debug\prototypingAssignment.pdb
+E:\VS projects\prototypingAssignment\prototypingAssignment\bin\Debug\prototypingAssignment.xml
+E:\VS projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.MainForm.resources
+E:\VS projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.Resources.resources
+E:\VS projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.AdminForm.resources
+E:\VS projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.browserControl.resources
+E:\VS projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.logInControl.resources
+E:\VS projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.VideoEditForm.resources
+E:\VS projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.vbproj.GenerateResource.Cache
+F:\VS projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.frmMain.resources
+F:\VS projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.frmVideoEdit.resources
+F:\VS projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.frmAdmin.resources
+F:\VS projects\prototypingAssignment\prototypingAssignment\obj\Debug\prototypingAssignment.uctLogIn.resources

@@ -1,13 +1,13 @@
-﻿Public Class logInControl
+﻿Public Class uctLogIn
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles BtnLogin.Click
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles cmdLogin.Click
 
-        Me.UsersTableAdapter.Fill(MainForm.VideoDatabaseDataSet.Users)
+        Me.UsersTableAdapter.Fill(frmMain.VideoDatabaseDataSet.Users)
 
         Dim found = False
         Dim index As Integer = 0
-        For i As Integer = 0 To MainForm.VideoDatabaseDataSet.Users.Rows.Count - 1
-            If MainForm.VideoDatabaseDataSet.Users.Rows(i).Item(1) = TextBox1.Text Then
+        For i As Integer = 0 To frmMain.VideoDatabaseDataSet.Users.Rows.Count - 1
+            If frmMain.VideoDatabaseDataSet.Users.Rows(i).Item(1) = txtUserName.Text Then
                 'MsgBox("found!")
                 index = i
                 found = True
@@ -17,14 +17,14 @@
         If found = False Then
             MsgBox("User not found")
         Else
-            If MainForm.VideoDatabaseDataSet.Users.Rows(index).Item(2) = TextBox2.Text Then
-                If MainForm.VideoDatabaseDataSet.Users.Rows(index).Item(3) = True Then
-                    MainForm.isAdmin = True
+            If frmMain.VideoDatabaseDataSet.Users.Rows(index).Item(2) = txtPassword.Text Then
+                If frmMain.VideoDatabaseDataSet.Users.Rows(index).Item(3) = True Then
+                    frmMain.isAdmin = True
                 Else
-                    MainForm.isAdmin = False
+                    frmMain.isAdmin = False
                 End If
 
-                MainForm.LogIn(MainForm.isAdmin)
+                frmMain.LogIn(frmMain.isAdmin)
             Else
                 MsgBox("password incorrect") 'TODO this is for testing, login should never be specific about the login failure on users end
             End If
@@ -35,11 +35,11 @@
     Protected Overrides Function ProcessCmdKey(ByRef msg As Message, keyData As Keys) As Boolean
 
         If keyData = Keys.Enter Then
-            BtnLogin.PerformClick()
+            cmdLogin.PerformClick()
             Return True
         End If
 
         Return MyBase.ProcessCmdKey(msg, keyData)
     End Function
-    
+
 End Class
